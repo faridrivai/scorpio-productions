@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films | Scorpio Productions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CONTAINER GRID STATIS (DI TENGAH) --- */
+        .slider-container {
+            position: relative;
+            padding: 0 20px;
+            margin: 50px auto 100px auto;
+            max-width: 1400px;
+        }
+
+        .film-track {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        /* --- FILM CARD --- */
+        .film-card {
+            flex: 0 0 320px;
+            width: 320px;
+            background-color: #050505;
+            border: 1px solid #1a1a1a;
+            position: relative;
+            user-select: none;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .film-card img.poster {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            padding: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            display: block;
+        }
+
+        .film-card video.trailer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 450px;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 2;
+        }
+
+        .hover-text {
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 12px 20px;
+            border-radius: 4px;
+            transform: translateY(20px);
+            transition: transform 0.5s ease, border-color 0.3s ease;
+            text-align: center;
+        }
+
+        .film-card:hover .hover-text {
+            border-color: #fff;
+        }
+
+        .film-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 20px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, transparent);
+            z-index: 3;
+            color: #fff;
+        }
+
+        .film-info h3 {
+            margin: 0 0 5px 0;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .film-info p {
+            margin: 0;
+            color: #aaa;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .film-card:hover img.poster {
+            opacity: 0;
+        }
+
+        .film-card:hover video.trailer {
+            opacity: 1;
+        }
+
+        .film-card:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .film-card:hover .hover-text {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .slider-container { padding: 0 10px; }
+            .film-track { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="show-content">
+        
+        <!-- Navbar -->
+        <nav class="navbar nav-scrolled" id="navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-navbar.png" alt="Scorpio">
+                <span class="logo-text">SCORPION</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Films</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header -->
+        <header class="page-header" style="text-align: center; padding: 180px 10% 40px 10%;">
+            <h1 style="font-family: 'Cinzel', serif; font-size: clamp(36px, 6vw, 50px); letter-spacing: 10px; margin-bottom: 15px;">
+                OUR <span>VISIONS</span>
+            </h1>
+            <p style="color: #888; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; max-width: 600px; margin: 0 auto;">
+                Koleksi karya film pilihan Scorpio Productions.
+            </p>
+        </header>
+
+        <!-- Container Kartu Film (Posisi Tengah, Tanpa Tombol Geser) -->
+        <div class="slider-container">
+            <div class="film-track">
+                
+                <!-- 1. The Wrath of Anneliese -->
+                <a href="projects/the-wrath-of-anneliese.html" class="film-card">
+                    <img src="assets/images/ane.jpeg" alt="Poster Film" class="poster">
+                    <video src="assets/images/ane.mp4" class="trailer" muted loop playsinline></video>
+                    <div class="hover-overlay"><span class="hover-text">Tonton Selengkapnya</span></div>
+                    <div class="film-info">
+                        <h3>The Wrath of Anneliese</h3>
+                        <p>Horror / Mystery</p>
+                    </div>
+                </a>
+
+                <!-- 2. Lelah -->
+                <a href="projects/lelah.html" class="film-card">
+                    <img src="assets/images/Lelah.png" alt="Poster Film" class="poster">
+                    <video src="assets/images/lelah.mp4" class="trailer" muted loop playsinline></video>
+                    <div class="hover-overlay"><span class="hover-text">Tonton Selengkapnya</span></div>
+                    <div class="film-info">
+                        <h3>Lelah</h3>
+                        <p>Short Film</p>
+                    </div>
+                </a>
+
+                <!-- 3. Sebentuk Rasa -->
+                <a href="projects/sebentuk-rasa.html" class="film-card">
+                    <img src="assets/images/rasa (1).jpeg" alt="Poster Film" class="poster">
+                    <video src="assets/images/suara.mp4" class="trailer" muted loop playsinline></video>
+                    <div class="hover-overlay"><span class="hover-text">Tonton Selengkapnya</span></div>
+                    <div class="film-info">
+                        <h3>Sebentuk Rasa</h3>
+                        <p>Artistic</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <footer>
+            <h2><img src="assets/images/logo-navbar.png" alt="Scorpio" style="height: 20px; vertical-align: middle; margin-right: 10px;"> SCORPIO PRODUCTIONS</h2>
+            <p>&copy; 2024 Scorpio Productions. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efek interaksi hover untuk memutar video trailer lokal
+        const cards = document.querySelectorAll('.film-card');
+        cards.forEach(card => {
+            const video = card.querySelector('.trailer');
+            card.addEventListener('mouseenter', () => {
+                if (video) video.play();
+            });
+            card.addEventListener('mouseleave', () => {
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0; 
+                }
+            });
+        });
+    </script>
+</body>
+</html>

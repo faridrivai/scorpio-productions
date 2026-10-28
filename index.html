@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorpio Productions | Into The Shadows</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Mengatur posisi hero agar kontennya turun mentok ke bawah */
+        .hero {
+            align-items: flex-end !important;
+            padding-bottom: 80px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="scorpio-logo-placeholder">
+            <img src="assets/images/logo-navbar.png" alt="Scorpio Logo" class="loader-logo-img">
+        </div>
+    </div>
+
+    <div id="content">
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-navbar1.png" alt="Scorpio">
+                <span class="logo-text">SCORPION</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Films</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>   
+        </nav>
+
+        <!-- HERO SECTION: POSISI TURUN MENTOK KE BAWAH -->
+        <header class="hero" style="background: url('assets/images/1(1).png') no-repeat center center/cover; background-attachment: fixed;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" style="margin-bottom: 10px;">
+                <span class="badge">PROJECT ARCHIVES DURING THE LECTURE PERIOD</span>
+                <p style="font-size: 16px; font-weight: 600; line-height: 1.8; color: #fff;">
+                    🥇 Lelah (2025) A short Documentary Film<br>
+                    🥈 Sebentuk Rasa di Panggung Semesta<br>
+                    🏅 The Wrath Of Anneliese
+                </p>
+            </div>
+        </header>
+
+        <!-- LATEST VISIONS SECTION -->
+        <section class="latest-releases">
+            <div class="section-header js-scroll slide-up">
+                <h2>Latest <span>Visions</span></h2>
+                <a href="projects.html" class="view-all">View All ➔</a>
+            </div>
+            
+            <div class="film-grid">
+                <a href="projects/the-wrath-of-anneliese.html" class="film-card js-scroll slide-up">
+                    <img src="assets/images/ane.jpeg" alt="The Wrath of Anneliese">
+                    <div class="film-overlay"></div>
+                    <div class="film-info">
+                        <h3>The Wrath of Anneliese</h3>
+                        <p>Horror / Mystery</p>
+                    </div>
+                </a>
+                <a href="projects/lelah.html" class="film-card js-scroll slide-up" style="transition-delay: 0.2s;">
+                    <img src="assets/images/Lelah.png" alt="Lelah">
+                    <div class="film-overlay"></div>
+                    <div class="film-info">
+                        <h3>Lelah</h3>
+                        <p>Short Documentary Film</p>
+                    </div>
+                </a>
+                <a href="projects/sebentuk-rasa.html" class="film-card js-scroll slide-up" style="transition-delay: 0.4s;">
+                    <img src="assets/images/rasa (1).jpeg" alt="Sebentuk Rasa di Panggung Semesta">
+                    <div class="film-overlay"></div>
+                    <div class="film-info">
+                        <h3>Sebentuk Rasa di Panggung Semesta</h3>
+                        <p>Artistic / Dramatic</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <h2><img src="assets/images/logo-navbar.png" alt="Scorpio" style="height: 20px; vertical-align: middle; margin-right: 10px;"> SCORPIO PRODUCTIONS</h2>
+            <p>&copy; 2024 Scorpio Productions. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

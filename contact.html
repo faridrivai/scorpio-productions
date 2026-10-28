@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Scorpio Productions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- LAYOUT VISUAL CONTACT --- */
+        .contact-hero {
+            padding: 160px 10% 60px 10%;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), var(--bg-color)), 
+                        url('assets/images/bg-main.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(36px, 6vw, 55px);
+            letter-spacing: 10px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .contact-hero h1 span {
+            color: var(--accent-color);
+        }
+
+        .contact-container {
+            padding: 40px 10% 120px 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        /* Bagian Kiri (Info & Sosmed) */
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+        }
+
+        .contact-info p {
+            color: #aaa;
+            margin-bottom: 40px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .social-label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-color);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icon {
+            width: 55px;
+            height: 55px;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            background: rgba(255, 255, 255, 0.03);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #fff;
+            transition: 0.4s ease;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .social-icon:hover {
+            border-color: var(--accent-color);
+            color: #000;
+            background: var(--accent-color);
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateY(-5px);
+        }
+
+        /* Bagian Kanan (Formulir Glassmorphism) */
+        .contact-form-wrapper {
+            flex: 1.4;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            padding: 45px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border-radius: 6px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        .input-group input, .input-group textarea {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #222;
+            padding: 15px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-glow);
+            outline: none;
+        }
+
+        .submit-btn {
+            background: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 16px 40px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 3px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        @media (max-width: 992px) {
+            .contact-container { flex-direction: column; padding: 40px 5% 100px 5%; }
+            .form-row { flex-direction: column; gap: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content" class="show-content">
+        <!-- Navbar -->
+        <nav class="navbar nav-scrolled" id="navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-navbar.png" alt="Scorpio">
+                <span class="logo-text">SCORPION</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Films</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Header -->
+        <header class="contact-hero">
+            <h1>GET IN <span>TOUCH</span></h1>
+            <p style="color: var(--accent-color); letter-spacing: 3px; font-weight: 700;">SEND YOUR TRANSMISSION</p>
+        </header>
+
+        <!-- Main Contact Section -->
+        <section class="contact-container">
+            
+            <div class="contact-info">
+                <h2>LET'S COLLABORATE.</h2>
+                <p>Punya naskah brilian, ide gila, atau tawaran kolaborasi? Markas Scorpio Productions selalu terbuka untuk visi-visi baru yang menantang batas.</p>
+                
+                <span class="social-label">Follow The Vision</span>
+                <div class="social-media">
+                    <a href="https://instagram.com/scorpio.productions" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/c/scorpioproductions" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Name / Agent</label>
+                            <input type="text" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="input-group" style="margin-bottom: 25px;">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Project Inquiry / Collaboration">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 25px;">
+                        <label>Message</label>
+                        <textarea rows="6" placeholder="Tell us about your vision..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Transmit Message</button>
+                </form>
+            </div>
+            
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <h2><img src="assets/images/logo-navbar.png" alt="Scorpio" style="height: 20px; vertical-align: middle; margin-right: 10px;"> SCORPIO PRODUCTIONS</h2>
+            <p>&copy; 2024 Scorpio Productions. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
