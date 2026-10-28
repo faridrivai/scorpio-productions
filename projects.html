@@ -138,10 +138,7 @@
             transform: translateY(0);
         }
 
-        @media (max-width: 768px) {
-            .slider-container { padding: 0 10px; }
-            .film-track { flex-direction: column; align-items: center; }
-        }
+        
     </style>
 </head>
 <body>
@@ -171,9 +168,9 @@
             </p>
         </header>
 
-        <!-- Container Kartu Film (Posisi Tengah, Tanpa Tombol Geser) -->
-        <div class="slider-container">
-            <div class="film-track">
+        <!-- Container Kartu Film -->
+        <section class="latest-releases" style="padding-top: 40px;">
+            <div class="film-grid">
                 
                 <!-- 1. The Wrath of Anneliese -->
                 <a href="projects/the-wrath-of-anneliese.html" class="film-card">
@@ -209,7 +206,7 @@
                 </a>
 
             </div>
-        </div>
+        </section>
 
         <footer>
             <h2><img src="assets/images/logo-navbar.png" alt="Scorpio" style="height: 20px; vertical-align: middle; margin-right: 10px;"> SCORPIO PRODUCTIONS</h2>

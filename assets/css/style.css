@@ -715,7 +715,7 @@ footer p { font-size: 11px; color: #444; text-transform: uppercase; letter-spaci
     .hero {
         /* Mengganti background dengan gambar foto tim mobile */
         background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
-                   url('../images/team-mobile.png') no-repeat center center/cover !important;
+                    url('../images/team-mobile.png') no-repeat center center/cover !important;
         
         /* Memastikan background-attachment tidak fixed di mobile agar performa lebih baik */
         background-attachment: scroll !important;
@@ -796,47 +796,49 @@ footer p { font-size: 11px; color: #444; text-transform: uppercase; letter-spaci
         padding: 30px 20px !important;
     }
 }
-/* --- TATA LETAK HORIZONTAL & CAN BE SCROLLED DI MOBILE --- */
+/* =========================================================
+   FIX TAMPILAN SATU FILM DI TENGAH & BISA DIGESER (MOBILE)
+========================================================= */
 @media (max-width: 768px) {
-    /* Mengubah container utama agar tidak memotong elemen yang meluap (overflow) */
     .slider-container {
+        width: 100% !important;
         padding: 0 !important;
-        margin: 20px auto 60px auto !important;
+        margin: 20px 0 40px 0 !important;
         overflow: visible !important;
     }
 
-    /* Jalur film dibuat berjejer ke samping dan bisa digeser */
-    .film-track {
+    .slider-container .film-track {
         display: flex !important;
-        flex-direction: row !important; /* Memaksa elemen menyamping */
-        flex-wrap: nowrap !important;   /* Mencegah elemen turun ke bawah */
-        overflow-x: auto !important;    /* Mengaktifkan fitur geser horizontal */
-        scroll-snap-type: x mandatory;   /* Efek geser magnetis yang mulus */
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
         gap: 15px !important;
-        padding: 20px 5% !important;
-        -webkit-overflow-scrolling: touch; /* Optimasi geser untuk iOS/Safari */
         
-        /* Menyembunyikan scrollbar agar tampilan bersih */
-        scrollbar-width: none; 
+        /* Mengatur padding agar kartu pertama tepat berada di tengah layar */
+        padding: 10px calc(50vw - 42.5vw) !important;
+        scrollbar-width: none !important;
     }
 
-    .film-track::-webkit-scrollbar {
-        display: none;
+    .slider-container .film-track::-webkit-scrollbar {
+        display: none !important;
     }
 
-    /* Mengatur kartu film agar tidak menyusut dan pas di layar HP */
-    .film-card {
-        flex: 0 0 240px !important; /* Lebar kartu tetap saat digeser */
-        width: 240px !important;
-        scroll-snap-align: center;   /* Kartu otomatis berhenti di tengah saat selesai digeser */
-        border-radius: 8px;
+    .slider-container .film-card {
+        flex: 0 0 85vw !important;  /* Lebar kartu 85% layar agar fokus ke 1 film */
+        width: 85vw !important;
+        min-width: 85vw !important;
+        scroll-snap-align: center !important;
+        flex-shrink: 0 !important;
+        border-radius: 12px !important;
+        margin: 0 !important;
     }
 
-    /* Ukuran poster & video trailer memanjang ke atas (Portrait) */
-    .film-card img.poster, 
-    .film-card video.trailer, 
-    .hover-overlay {
-        height: 350px !important;    /* Tinggi portrait sinematik */
+    .slider-container .film-card img.poster, 
+    .slider-container .film-card video.trailer, 
+    .slider-container .film-card .hover-overlay {
+        height: 420px !important;
         object-fit: cover !important;
     }
 }
