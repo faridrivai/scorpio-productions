@@ -714,25 +714,38 @@ footer p { font-size: 11px; color: #444; text-transform: uppercase; letter-spaci
     /* Menargetkan section dengan kelas .hero */
     .hero {
         /* Mengganti background dengan gambar foto tim mobile */
-        background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                    url('../images/team-mobile.jpg.png') no-repeat center center/cover !important;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                   url('../images/team-mobile.png') no-repeat center center/cover !important;
         
         /* Memastikan background-attachment tidak fixed di mobile agar performa lebih baik */
         background-attachment: scroll !important;
         
         /* Menyesuaikan posisi konten hero agar teks tetap terbaca */
         display: flex;
-        align-items: flex-end; /* Memindahkan teks ke bawah */
-        padding-bottom: 50px;
+        align-items: flex-end !important;       /* Posisi ke bawah */
+        justify-content: flex-start !important;  /* Posisi ke kiri */
+        text-align: left !important;             /* Rataan teks ke kiri */
+        padding-left: 5% !important;             /* Jarak dari tepi kiri layar */
+        padding-right: 5% !important;
+        padding-bottom: 40px !important;         /* Jarak dari tepi bawah layar */
     }
 
-    /* Memastikan teks hero terlihat jelas di atas foto yang lebih detail */
+    /* Memastikan teks hero terlihat jelas di atas foto tim */
     .hero-content {
-         /* Memberi background gelap tipis di belakang teks */
-        padding: 20px;
+        padding: 15px;
         border-radius: 8px;
         width: 100%;
-       
+    }
+
+    /* Mengecilkan ukuran badge dan teks di mobile agar proporsional */
+    .hero-content .badge {
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .hero-content p {
+        font-size: 13px !important;              
+        line-height: 1.6 !important;
     }
 }
 /* --- POSISI TEKS HERO DI KIRI BAWAH & UKURAN KECIL PADA MOBILE --- */
