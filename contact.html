@@ -167,10 +167,43 @@
             box-shadow: 0 0 20px var(--accent-glow);
         }
 
-        @media (max-width: 992px) {
-            .contact-container { flex-direction: column; padding: 40px 5% 100px 5%; }
-            .form-row { flex-direction: column; gap: 25px; }
+        /* --- RESPONSIVITAS MOBILE UNTUK CONTACT --- */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 12px 4% !important;
+                background-color: rgba(0, 0, 0, 0.95) !important;
+                backdrop-filter: blur(10px) !important;
+            }
+            .navbar .logo img {
+                height: 20px !important;
+            }
+            .navbar .logo .logo-text {
+                font-size: 14px !important;
+                letter-spacing: 1px !important;
+            }
+            .nav-links {
+                display: flex !important;
+                gap: 10px !important;
+            }
+            .nav-links a {
+                font-size: 10px !important;
+                letter-spacing: 0.5px !important;
+            }
+            .contact-container { 
+                flex-direction: column; 
+                padding: 40px 5% 80px 5%; 
+                gap: 40px; 
+            }
+            .contact-form-wrapper { 
+                padding: 25px; 
+            }
+            .form-row { 
+                flex-direction: column; 
+                gap: 20px; 
+                margin-bottom: 0; 
+            }
         }
+        
     </style>
 </head>
 <body>

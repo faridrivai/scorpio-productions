@@ -149,9 +149,40 @@
             line-height: 1.6;
         }
 
-        @media (max-width: 992px) {
-            .manifesto-section { flex-direction: column; text-align: center; }
-            .manifesto-text h2 { text-align: center; }
+        /* --- RESPONSIVITAS MOBILE UNTUK ABOUT --- */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 12px 4% !important;
+                background-color: rgba(0, 0, 0, 0.95) !important;
+                backdrop-filter: blur(10px) !important;
+            }
+            .navbar .logo img {
+                height: 20px !important;
+            }
+            .navbar .logo .logo-text {
+                font-size: 14px !important;
+                letter-spacing: 1px !important;
+            }
+            .nav-links {
+                display: flex !important;
+                gap: 10px !important;
+            }
+            .nav-links a {
+                font-size: 10px !important;
+                letter-spacing: 0.5px !important;
+            }
+            .manifesto-section { 
+                flex-direction: column; 
+                padding: 60px 5%; 
+                gap: 40px; 
+                text-align: center; 
+            }
+            .manifesto-text h2 { 
+                font-size: 28px; 
+            }
+            .services-section {
+                padding: 60px 5%;
+            }
         }
     </style>
 </head>
